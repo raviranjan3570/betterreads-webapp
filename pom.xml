@@ -11,7 +11,7 @@
 	<artifactId>webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>webapp</name>
-	<description>A webapp for managing the books which you are reading.</description>
+	<description>A web app for managing the books which you are reading.</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

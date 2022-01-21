@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class SpringBetterReadsApplication {
+public class BetterReadsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBetterReadsApplication.class, args);
+		SpringApplication.run(BetterReadsApp.class, args);
 	}
 
 	@RequestMapping("/user")
