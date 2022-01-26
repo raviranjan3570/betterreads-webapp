@@ -20,22 +20,7 @@
             </div>
         </nav>
         <section class="content">
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img th:src="${coverImage}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title display-1" th:text=" ${book.name}">Book name</h5>
-                            <p class="card-text display-5" th:text=" ${book.authorNames}">Author Name</p>
-                            <p class="card-text" th:text=" ${book.description}">Book description</p>
-                            <p class="card-text">Published Date: <small class="text-muted"
-                                    th:text=" ${book.publishedDate}">2022-1-1</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h5 class="card-title display-1" th:text=" ${searchResult.size}">Size</h5>
         </section>
     </div>
 </body>
