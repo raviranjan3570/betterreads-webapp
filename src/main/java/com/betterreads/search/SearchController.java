@@ -39,7 +39,7 @@ public class SearchController {
                 List<SearchResultBook> books = result.getDocs()
                                 .stream()
                                 .limit(10)
-                                .map(bookResult -> {
+                                .peek(bookResult -> {
                                         bookResult.setKey(bookResult.getKey().replace("/works/", ""));
                                         String coverId = bookResult.getCover_i();
                                         if (StringUtils.hasText(coverId)) {
@@ -48,7 +48,6 @@ public class SearchController {
                                                 coverId = "/images/no-image.png";
                                         }
                                         bookResult.setCover_i(coverId);
-                                        return bookResult;
                                 })
                                 .collect(Collectors.toList());
                 model.addAttribute("searchResult", books);
