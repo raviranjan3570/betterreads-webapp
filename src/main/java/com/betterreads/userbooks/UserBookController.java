@@ -55,7 +55,7 @@ public class UserBookController {
 
         BooksByUser booksByUser = new BooksByUser();
         booksByUser.setId(userId);
-        booksByUser.setBook_id(bookId);
+        booksByUser.setBookId(bookId);
         booksByUser.setBookName(book.getName());
         booksByUser.setCoverIds(book.getCoverIds());
         booksByUser.setAuthorNames(book.getAuthorNames());

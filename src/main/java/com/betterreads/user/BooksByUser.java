@@ -20,7 +20,7 @@ public class BooksByUser {
 
     @PrimaryKeyColumn(name = "book_id", ordinal = 1, type = PrimaryKeyType.CLUSTERED)
     @CassandraType(type = CassandraType.Name.TEXT)
-    private String book_id;
+    private String bookId;
 
     @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED, ordering = Ordering.DESCENDING)
     @CassandraType(type = CassandraType.Name.TIMEUUID)
@@ -61,12 +61,12 @@ public class BooksByUser {
         this.id = id;
     }
 
-    public String getBook_id() {
-        return book_id;
+    public String getBookId() {
+        return bookId;
     }
 
-    public void setBook_id(String book_id) {
-        this.book_id = book_id;
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public UUID getTimeUuid() {
@@ -133,13 +133,13 @@ public class BooksByUser {
         BooksByUser that = (BooksByUser) o;
 
         if (!id.equals(that.id)) return false;
-        return book_id.equals(that.book_id);
+        return bookId.equals(that.bookId);
     }
 
     @Override
     public int hashCode() {
         int result = id.hashCode();
-        result = 31 * result + book_id.hashCode();
+        result = 31 * result + bookId.hashCode();
         return result;
     }
 }

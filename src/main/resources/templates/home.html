@@ -28,13 +28,22 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img th:src="${book.coverUrl}" class="img-fluid rounded-start" alt="...">
+                        <img th:src="${book.coverUrl}" class="img-fluid rounded-start">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title" th:text="${book.bookName}">Card title</h5>
+                            <a th:href="@{'/books/' + ${book.bookId}}" class="card-title" th:text="${book.bookName}">Card title</a>
                             <p class="card-text" th:text=" ${book.authorNames}">Author Name</p>
-                            <p class="card-text" th:text=" ${book.readingStatus}">Status</p>
+                            <div th:switch="${book.readingStatus}">
+                                <p th:case="'0-reading'" class="card-text">Currently Reading</p>
+                                <p th:case="'1-finished'" class="card-text">Finished</p>
+                                <p th:case="'2-dnf'" class="card-text">Did not finished</p>
+                            </div>
+                            <p class="card-text">
+                                <span th:each="rating: ${#numbers.sequence(0, book.rating - 1)}">
+                                    &#9733;
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
