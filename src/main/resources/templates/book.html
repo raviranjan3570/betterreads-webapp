@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -14,12 +13,15 @@
 
 <body>
     <div class="container">
+        <!--nav bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-bottom: 20px">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">Better Reads</a>
             </div>
         </nav>
         <div th:insert="components/book-search :: search-panel"></div>
+
+        <!--start of the card-->
         <section class="content">
             <div class="card">
                 <div class="row g-0">
@@ -82,6 +84,7 @@
                 </div>
             </div>
         </section>
+        <!--end of the card-->
     </div>
 </body>
 

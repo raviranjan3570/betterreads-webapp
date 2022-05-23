@@ -13,6 +13,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import reactor.core.publisher.Mono;
 
+/*
+Here we are using web client for making web requests
+*/
 @Controller
 public class SearchController {
 

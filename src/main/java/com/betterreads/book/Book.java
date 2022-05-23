@@ -13,7 +13,6 @@ import org.springframework.data.cassandra.core.mapping.CassandraType.Name;
 
 @Table(value = "book_by_id")
 public class Book {
-
     @Id
     @PrimaryKeyColumn(name = "book_id", ordinal = 0, type = PrimaryKeyType.PARTITIONED)
     private String id;

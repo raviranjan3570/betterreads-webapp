@@ -5,7 +5,6 @@ import java.util.List;
 public class SearchResult {
 
     private int numFound;
-
     private List<SearchResultBook> docs;
 
     public int getNumFound() {
